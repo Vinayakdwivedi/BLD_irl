@@ -43,11 +43,23 @@ hero.addEventListener('touchend', e => {
 
 // ── NAV SCROLL ──
 const nav = document.getElementById('main-nav');
+const scrollProgressBar = document.getElementById('scrollProgressBar');
+
+function updateScrollProgress() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+  scrollProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+}
+
 window.addEventListener('scroll', () => {
   nav.style.background = window.scrollY > 40
     ? 'rgba(42,30,18,0.97)'
     : 'rgba(59,42,26,0.96)';
+  updateScrollProgress();
 });
+
+window.addEventListener('resize', updateScrollProgress);
+updateScrollProgress();
 
 // ── HAMBURGER MENU ──
 function toggleMenu() {

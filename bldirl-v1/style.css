@@ -13,6 +13,8 @@
   --text-dark:  #2A1F14;
   --text-mid:   #5A4535;
   --text-light: #8A7060;
+  --nav-height: 68px;
+  --progress-height: 4px;
 }
 
 html { scroll-behavior: smooth; }
@@ -24,10 +26,27 @@ body {
   line-height: 1.7;
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--progress-height);
+  z-index: 1001;
+  background: rgba(242,235,224,0.18);
+}
+
+.scroll-progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--sand), var(--teak), var(--walnut));
+  transition: width 0.08s linear;
+}
+
 /* ── NAV ── */
 nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: var(--progress-height); left: 0; right: 0;
   z-index: 1000;
   background: rgba(59,42,26,0.96);
   backdrop-filter: blur(8px);
@@ -35,7 +54,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  height: 68px;
+  height: var(--nav-height);
   border-bottom: 1px solid rgba(201,168,124,0.2);
 }
 
@@ -44,6 +63,13 @@ nav {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+}
+.nav-logo-image {
+  width: 40px;
+  height: 40px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 .nav-logo-mark {
   width: 40px; height: 40px;
@@ -120,8 +146,9 @@ nav {
   position: relative;
   height: 100vh;
   min-height: 600px;
+  padding: 0;
   overflow: hidden;
-  margin-top: 68px;
+  margin-top: calc(var(--nav-height) + var(--progress-height));
 }
 
 .slides-track {
@@ -813,7 +840,7 @@ footer {
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--bark); padding: 20px 5%; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-height); left: 0; right: 0; background: var(--bark); padding: 20px 5%; }
   .nav-links.open { display: flex; }
   .hamburger { display: flex; }
   section { padding: 64px 5%; }
