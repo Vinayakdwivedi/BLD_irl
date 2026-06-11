@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BLD Institute of Research & Learning Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-mark">BLD</div>
+    <div class="nav-logo-text">
+      BLDIRL Foundation
+      <span>Empowering Minds</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <!-- <li><a href="#csr">CSR</a></li> -->
+    <li><a href="#research">Research</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section id="home">
+  <div class="slides-track" id="slidesTrack">
+
+    <div class="slide active">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow">Aligned with Digital India & NEP 2020</div>
+        <h1 class="slide-title">Empowering Minds Through Education</h1>
+        <p class="slide-desc">Advancing digital literacy, research, and innovation for students, educators, and communities across India.</p>
+        <a href="#about" class="slide-btn">Discover Our Mission</a>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=1600&q=80');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow">Digital Literacy Initiative</div>
+        <h1 class="slide-title">Bridging the Digital Divide</h1>
+        <p class="slide-desc">From cyber safety workshops to AI awareness programs — equipping every learner with future-ready skills.</p>
+        <a href="#programs" class="slide-btn">Explore Programs</a>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow">Research & Innovation</div>
+        <h1 class="slide-title">Building a Knowledge-Driven Society</h1>
+        <p class="slide-desc">Aligned with Digital India and NEP 2020, we nurture curiosity, innovation, and lifelong learning.</p>
+        <a href="#research" class="slide-btn">Our Research</a>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1600&q=80');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow">Teacher Capacity Building</div>
+        <h1 class="slide-title">Transforming Educators, Transforming India</h1>
+        <p class="slide-desc">Comprehensive teacher development programs that multiply impact and inspire the next generation of learners.</p>
+        <!-- <a href="#csr" class="slide-btn">Partner With Us</a> -->
+      </div>
+    </div>
+
+  </div>
+
+  <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#8592;</button>
+  <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#8594;</button>
+
+  <div class="slider-dots" id="sliderDots">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-img-placeholder">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="48" height="38" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 22h48" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16" cy="16" r="2" fill="currentColor"/>
+              <circle cx="24" cy="16" r="2" fill="currentColor"/>
+              <path d="M20 32h24M20 38h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:1px;opacity:0.5;">BLD FOUNDATION</span>
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">§8</div>
+          <div class="about-badge-text">Non-Profit Org</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">BLD Institute of Research & Learning Foundation</h2>
+        <div class="section-divider"></div>
+        <p class="section-lead">A Section 8 non-profit committed to advancing education, digital literacy, research, innovation, and skill development — empowering students, educators, and communities through technology-enabled learning.</p>
+        <div class="vm-cards">
+          <div class="vm-card">
+            <h4>Our Vision</h4>
+            <p>To create an inclusive and digitally empowered society where every learner has access to quality education, innovation, and opportunities for growth.</p>
+          </div>
+          <div class="vm-card">
+            <h4>Our Mission</h4>
+            <p>Promote digital literacy, support quality education, encourage lifelong learning, build capacities of teachers and students, and contribute to national development through knowledge-driven initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Focus Areas & Programs</h2>
+    <div class="section-divider"></div>
+    <p class="section-lead">Eight interconnected pillars that guide every initiative, workshop, and partnership we undertake.</p>
+    <div class="focus-grid">
+      <div class="focus-card"><div class="focus-icon">💻</div><h3>Digital Literacy</h3><p>Workshops and training that build foundational digital skills for students and communities.</p></div>
+      <div class="focus-card"><div class="focus-icon">🤖</div><h3>AI & Emerging Tech</h3><p>Awareness programs on artificial intelligence, future technologies, and their responsible use.</p></div>
+      <div class="focus-card"><div class="focus-icon">📚</div><h3>Education & Learning</h3><p>Supplementary learning support and structured educational outreach for underserved learners.</p></div>
+      <div class="focus-card"><div class="focus-icon">🎓</div><h3>Teacher Capacity Building</h3><p>Professional development programs that equip educators with modern pedagogical tools.</p></div>
+      <div class="focus-card"><div class="focus-icon">🔬</div><h3>STEM & Innovation</h3><p>School innovation clubs and project-based STEM programs that spark curiosity and creativity.</p></div>
+      <div class="focus-card"><div class="focus-icon">📊</div><h3>Research & Development</h3><p>Applied research in education, technology, and social impact to generate evidence-based insights.</p></div>
+      <div class="focus-card"><div class="focus-icon">🌱</div><h3>Youth Skill Development</h3><p>Future-ready skill initiatives that prepare young people for the evolving job landscape.</p></div>
+      <div class="focus-card"><div class="focus-icon">🤝</div><h3>Community Empowerment</h3><p>Grassroots programs that uplift communities through knowledge, awareness, and inclusion.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="section-inner">
+    <div class="section-label">Our Reach</div>
+    <h2 class="section-title">Projects & Impact</h2>
+    <div class="section-divider"></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">5000+</div><div class="stat-label">Students Reached</div></div>
+      <div class="stat-box"><div class="stat-num">200+</div><div class="stat-label">Teachers Trained</div></div>
+      <div class="stat-box"><div class="stat-num">50+</div><div class="stat-label">Workshops Conducted</div></div>
+      <div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Schools Partnered</div></div>
+      <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Research Projects</div></div>
+    </div>
+    <div class="section-label" style="margin-bottom:20px;">Key Initiatives</div>
+    <div class="initiatives-grid">
+      <div class="initiative-item"><div class="initiative-dot"></div><p>Digital literacy workshops for school and college students</p></div>
+      <div class="initiative-item"><div class="initiative-dot"></div><p>Cyber safety awareness programs for youth and parents</p></div>
+      <div class="initiative-item"><div class="initiative-dot"></div><p>AI and future skills training modules</p></div>
+      <div class="initiative-item"><div class="initiative-dot"></div><p>Teacher professional development programs</p></div>
+      <div class="initiative-item"><div class="initiative-dot"></div><p>School innovation and STEM clubs</p></div>
+      <div class="initiative-item"><div class="initiative-dot"></div><p>Research and educational outreach projects</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CSR -->
+<!-- <section id="csr">
+  <div class="section-inner">
+    <div class="section-label">Partnerships</div>
+    <h2 class="section-title">CSR Partnerships</h2>
+    <div class="section-divider"></div>
+    <div class="csr-layout">
+      <div>
+        <p class="section-lead">We collaborate with corporates, institutions, and government bodies to channel CSR investments into meaningful, measurable educational outcomes.</p>
+        <ul class="csr-points" style="margin-top:28px;">
+          <li>Co-design digital literacy programs with corporate partners</li>
+          <li>Skill development initiatives aligned with industry needs</li>
+          <li>Annual impact reports with verified social metrics</li>
+          <li>Project-based engagements tied to specific SDG goals</li>
+          <li>Joint programs under Digital India and NEP 2020 frameworks</li>
+          <li>End-to-end program execution with field teams</li>
+        </ul>
+      </div>
+      <div class="csr-why">
+        <h3>Why Partner with BLDIRL?</h3>
+        <div class="why-item"><div class="why-num">01</div><p>Education-focused organization with sector-specific expertise</p></div>
+        <div class="why-item"><div class="why-num">02</div><p>Technology-driven approach ensuring scalable reach</p></div>
+        <div class="why-item"><div class="why-num">03</div><p>Experienced academic and field leadership team</p></div>
+        <div class="why-item"><div class="why-num">04</div><p>Commitment to measurable, transparent social impact</p></div>
+        <div class="why-item"><div class="why-num">05</div><p>Full alignment with Digital India and NEP 2020 goals</p></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-inner">
+    <div class="section-label">Knowledge & Innovation</div>
+    <h2 class="section-title">Research & Innovation</h2>
+    <div class="section-divider"></div>
+    <p class="section-lead">Generating evidence, insights, and open knowledge to strengthen education practice and policy in India.</p>
+    <div class="research-grid">
+      <div class="research-card"><div class="research-card-top"></div><div class="research-card-body"><div class="research-tag">Ongoing · 2024</div><h3>Digital Readiness Index for Schools</h3><p>A structured survey to benchmark digital infrastructure and teacher readiness across government schools.</p></div></div>
+      <div class="research-card"><div class="research-card-top"></div><div class="research-card-body"><div class="research-tag">Completed · 2023</div><h3>Cyber Awareness Levels Among Adolescents</h3><p>Primary research on cyber safety knowledge gaps in students aged 12–18, informing our awareness curriculum.</p></div></div>
+      <div class="research-card"><div class="research-card-top"></div><div class="research-card-body"><div class="research-tag">Upcoming · 2025</div><h3>AI Literacy in Teacher Education</h3><p>A mixed-methods study examining how educators understand and respond to AI in their professional practice.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="section-inner">
+    <div class="section-label">Stay Updated</div>
+    <h2 class="section-title">News & Events</h2>
+    <div class="section-divider"></div>
+    <div class="news-grid">
+      <div class="news-card"><div class="news-img">📰</div><div class="news-body"><div class="news-date">December 2024</div><h3>Digital Literacy Camp — Winter Edition</h3><p>A 3-day residential camp for 200 students from rural schools, focused on foundational computing and internet safety.</p><a href="#" class="news-link">Read More →</a></div></div>
+      <div class="news-card"><div class="news-img">🎤</div><div class="news-body"><div class="news-date">October 2024</div><h3>Teacher's AI Readiness Summit 2024</h3><p>A full-day summit bringing together 150 educators to explore AI integration in classroom teaching.</p><a href="#" class="news-link">Read More →</a></div></div>
+      <div class="news-card"><div class="news-img">🏫</div><div class="news-body"><div class="news-date">August 2024</div><h3>Innovation Club Launch — 10 Schools</h3><p>BLDIRL launched STEM Innovation Clubs in 10 partner schools across the region, engaging 500+ students.</p><a href="#" class="news-link">Read More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-label">Moments & Memories</div>
+    <h2 class="section-title">Gallery</h2>
+    <div class="section-divider"></div>
+    <div class="gallery-mosaic">
+      <div class="gallery-cell wide tall" style="font-size:64px;">🎓</div>
+      <div class="gallery-cell">💻</div>
+      <div class="gallery-cell">🤝</div>
+      <div class="gallery-cell wide">🔬</div>
+      <div class="gallery-cell">📚</div>
+    </div>
+    <p style="text-align:center;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(242,235,224,0.3);margin-top:20px;">Photos from our programs & events</p>
+  </div>
+</section>
+
+<!-- ANNUAL REPORTS -->
+<!-- <section id="annual-reports">
+  <div class="section-inner">
+    <div class="section-label">Transparency & Accountability</div>
+    <h2 class="section-title">Annual Reports</h2>
+    <div class="section-divider"></div>
+    <p class="section-lead">We believe in full transparency. Our annual reports document every program, impact metric, and financial summary.</p>
+    <div class="reports-list">
+      <a href="#" class="report-card"><div class="report-icon">📄</div><div class="report-info"><h4>Annual Report 2023–24</h4><span>PDF · Download</span></div></a>
+      <a href="#" class="report-card"><div class="report-icon">📄</div><div class="report-info"><h4>Annual Report 2022–23</h4><span>PDF · Download</span></div></a>
+      <a href="#" class="report-card"><div class="report-icon">📄</div><div class="report-info"><h4>Annual Report 2021–22</h4><span>PDF · Download</span></div></a>
+      <a href="#" class="report-card"><div class="report-icon">📄</div><div class="report-info"><h4>Impact Summary 2021</h4><span>PDF · Download</span></div></a>
+    </div>
+  </div>
+</section> -->
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact Us</h2>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p style="font-size:16px;color:rgba(242,235,224,0.7);max-width:400px;">Whether you're looking to partner, volunteer, or simply learn more about our work — we'd love to hear from you.</p>
+        <div class="contact-item"><div class="contact-item-icon">📍</div><div><h4>Address</h4><p>BLD Institute of Research & Learning Foundation<br>India</p></div></div>
+        <div class="contact-item"><div class="contact-item-icon">✉️</div><div><h4>Email</h4><p>info@bldirl.org</p></div></div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name"/></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@email.com"/></div>
+        <div class="form-group">
+          <label>I am interested in</label>
+          <select>
+            <option value="">Select an area…</option>
+            <option>CSR Partnership</option>
+            <option>Volunteering</option>
+            <option>Research Collaboration</option>
+            <option>Program Information</option>
+            <option>Media & Press</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
+        <button class="btn-submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="nav-logo-mark">BLD</div>
+        <div class="nav-logo-text" style="color:var(--linen);">
+          BLDIRL Foundation
+          <span></span>
+        </div>
+      </div>
+      <p>Committed to advancing education, digital literacy, and innovation for a knowledge-driven India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Organisation</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#research">Research</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Engage</h5>
+      <ul>
+        <li><a href="#csr">CSR Partners</a></li>
+        <li><a href="#news">News & Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#annual-reports">Annual Reports</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 BLD Institute of Research & Learning Foundation. All rights reserved.</span>
+    <span class="footer-tagline">"Empowering Minds Through Education, Innovation, and Digital Inclusion."</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
