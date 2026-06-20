@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | BLD Institute of Research & Learning Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="gallery-page">
+
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+</div>
+
+<nav id="main-nav">
+  <a href="index.html#home" class="nav-logo">
+    <img class="nav-logo-image" src="./Logo_BLD_Institute tranlucent.png" alt="BLD Institute of Research & Learning Foundation logo" />
+    <div class="nav-logo-text">
+      BLDIRL Foundation
+      <span>Empowering Minds</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="index.html#impact">Impact</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#news">News</a></li>
+    <li><a href="gallery.html" class="nav-current">Gallery</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section id="gallery-page-hero" class="gallery-page-hero">
+  <div class="section-inner">
+    <div class="gallery-page-grid">
+      <div>
+        <div class="section-label">Photo Archive</div>
+        <h1 class="section-title gallery-page-title">Our Gallery</h1>
+        <div class="section-divider"></div>
+        <p class="section-lead">A dedicated space for program visuals, workshop highlights, and moments that reflect the foundation's work in education, research, and digital inclusion.</p>
+        <div class="gallery-page-actions">
+          <a href="#gallery-collection" class="gallery-link-btn">Browse Collection</a>
+          <a href="index.html#contact" class="gallery-link-btn gallery-link-btn--ghost">Share New Photos</a>
+        </div>
+      </div>
+
+      <div class="gallery-page-stats">
+        <article class="gallery-stat-card">
+          <span class="gallery-stat-number">4</span>
+          <span class="gallery-stat-label">Starter Visuals</span>
+        </article>
+        <article class="gallery-stat-card">
+          <span class="gallery-stat-number">3</span>
+          <span class="gallery-stat-label">Story Themes</span>
+        </article>
+        <article class="gallery-stat-card">
+          <span class="gallery-stat-number">1</span>
+          <span class="gallery-stat-label">Click-To-Preview Experience</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery-spotlight-section" class="gallery-spotlight-section">
+  <div class="section-inner">
+    <div class="gallery-spotlight">
+      <button
+        class="gallery-trigger gallery-spotlight-media"
+        type="button"
+        data-full=".\gallery\gallery_bld.png"
+        data-caption="Director of BLD Institute."
+      >
+        <img src=".\gallery\gallery_bld.png" alt="Team discussion during a workshop planning session" />
+      </button>
+
+      <div class="gallery-spotlight-copy">
+        <div class="section-label">Featured Frame</div>
+        <h2>Collaboration That Shapes Programs</h2>
+        <p>From planning workshops to reviewing outcomes, the foundation's work is built through collaborative thinking, research-led discussion, and practical action.</p>
+        <div class="gallery-highlight-points">
+          <span>Workshop planning</span>
+          <span>Team dialogue</span>
+          <span>Education strategy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery-collection" class="gallery-collection">
+  <div class="section-inner">
+    <div class="section-label">Collection</div>
+    <h2 class="section-title">Programs, Research, and Foundation Identity</h2>
+    <div class="section-divider"></div>
+    <p class="gallery-section-copy gallery-section-copy--dark">These starter visuals are pulled from the current project files so the gallery is ready now and easy to replace once you send the final event photos.</p>
+
+    <!-- Replace these starter images with the event photos you share next. -->
+    <div class="gallery-grid-full">
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\gallery_bld_2.png"
+          data-caption="teachers engaged in a BLDIRL learning session."
+        >
+          <img src=".\gallery\gallery_bld_2.png" alt="Teachers engaged in a learning session" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <span class="gallery-card-tag">Programs</span>
+          <h3>Learning In Action</h3>
+          <p>Study environments and learner participation that align with the foundation's academic support mission.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\teacher-teaching.png"
+          data-caption="learning environment connected to the foundation's mission."
+        >
+          <img src=".\gallery\teacher-teaching.png" alt="Research and learning themed visual" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <!-- <span class="gallery-card-tag">Research</span> -->
+          <!-- <h3>Knowledge & Inquiry</h3> -->
+          <!-- <p>Visuals that communicate the institution's focus on inquiry, reflection, and future-ready learning.</p> -->
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger gallery-trigger--logo"
+          type="button"
+          data-full="./Logo_BLD_Institute tranlucent.png"
+          data-caption="BLD Institute of Research & Learning Foundation identity mark."
+        >
+          <img src="./Logo_BLD_Institute tranlucent.png" alt="BLD Institute of Research and Learning Foundation logo" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <span class="gallery-card-tag">Identity</span>
+          <h3>Foundation Branding</h3>
+          <p>The institutional mark that ties together programs, outreach, and communication across the website.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\value-at-bld.png"
+          data-caption="learning environment connected to the foundation's mission."
+        >
+          <img src=".\gallery\value-at-bld.png" alt="Research and learning themed visual" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <!-- <span class="gallery-card-tag">Research</span> -->
+          <!-- <h3>Knowledge & Inquiry</h3> -->
+          <!-- <p>Visuals that communicate the institution's focus on inquiry, reflection, and future-ready learning.</p> -->
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\Learning-in-rural.jpeg"
+          data-caption="learning environment connected to the foundation's mission."
+        >
+          <img src=".\gallery\Learning-in-rural.jpeg" alt="Research and learning themed visual" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <!-- <span class="gallery-card-tag">Research</span> -->
+          <!-- <h3>Knowledge & Inquiry</h3> -->
+          <!-- <p>Visuals that communicate the institution's focus on inquiry, reflection, and future-ready learning.</p> -->
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\celebrations-at-BLD.png"
+          data-caption="learning environment connected to the foundation's mission."
+        >
+          <img src=".\gallery\celebrations-at-BLD.png" alt="Research and learning themed visual" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <!-- <span class="gallery-card-tag">Research</span> -->
+          <!-- <h3>Knowledge & Inquiry</h3> -->
+          <!-- <p>Visuals that communicate the institution's focus on inquiry, reflection, and future-ready learning.</p> -->
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <button
+          class="gallery-trigger"
+          type="button"
+          data-full=".\gallery\award-presendation.png"
+          data-caption="learning environment connected to the foundation's mission."
+        >
+          <img src=".\gallery\award-presendation.png" alt="Research and learning themed visual" loading="lazy" />
+        </button>
+        <div class="gallery-card-copy gallery-card-copy--dark">
+          <!-- <span class="gallery-card-tag">Research</span> -->
+          <!-- <h3>Knowledge & Inquiry</h3> -->
+          <!-- <p>Visuals that communicate the institution's focus on inquiry, reflection, and future-ready learning.</p> -->
+        </div>
+      </article>
+
+
+      <!-- <article class="gallery-info-card">
+        <div class="section-label">Next Step</div>
+        <h3>Ready For Your Real Images</h3>
+        <p>Send the photos you want included and this page can be updated with the final gallery content without changing the layout structure.</p>
+        <a href="index.html#contact" class="gallery-link-btn gallery-link-btn--compact">Send Gallery Images</a>
+      </article> -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="nav-logo-mark">BLD</div>
+        <div class="nav-logo-text" style="color:var(--linen);">
+          BLDIRL Foundation
+          <span></span>
+        </div>
+      </div>
+      <p>Committed to advancing education, digital literacy, and innovation for a knowledge-driven India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Organisation</h5>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#impact">Impact</a></li>
+        <li><a href="index.html#research">Research</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Engage</h5>
+      <ul>
+        <li><a href="index.html#news">News & Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#annual-reports">Annual Reports</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 BLD Institute of Research & Learning Foundation. All rights reserved.</span>
+    <span class="footer-tagline">"Empowering Minds Through Education, Innovation, and Digital Inclusion."</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
