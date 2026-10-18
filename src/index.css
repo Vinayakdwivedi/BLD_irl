@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette from User:
+       --onyx: #0a0a0a (hsla(0, 0%, 4%, 1))
+       --yellow-green: #acc862 (hsla(76, 48%, 58%, 1))
+       --beige: #e2e7ce (hsla(72, 34%, 86%, 1))
+       --hunter-green: #445f34 (hsla(98, 29%, 29%, 1))
+    */
+    --onyx: 0 0% 4%;
+    --yellow-green: 76 48% 58%;
+    --beige: 72 34% 86%;
+    --hunter-green: 98 29% 29%;
+
+    /* Light Theme */
+    --background: 72 25% 96%;
+    --foreground: 98 35% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 98 35% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 98 35% 14%;
+
+    --primary: 98 29% 29%;             /* Hunter Green #445f34 */
+    --primary-foreground: 72 34% 86%;  /* Beige #e2e7ce */
+
+    --secondary: 76 48% 58%;           /* Yellow Green #acc862 */
+    --secondary-foreground: 0 0% 4%;   /* Onyx #0a0a0a */
+
+    --muted: 72 20% 90%;
+    --muted-foreground: 98 20% 36%;
+
+    --accent: 76 48% 58%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 98 20% 82%;
+    --input: 98 20% 82%;
+    --ring: 76 48% 58%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 0 0% 4%;             /* Onyx #0a0a0a */
+    --foreground: 72 34% 86%;          /* Beige #e2e7ce */
+
+    --card: 98 30% 9%;                 /* Deep Hunter-Onyx #111a0e */
+    --card-foreground: 72 34% 86%;
+
+    --popover: 98 30% 9%;
+    --popover-foreground: 72 34% 86%;
+
+    --primary: 76 48% 58%;             /* Yellow Green #acc862 */
+    --primary-foreground: 0 0% 4%;     /* Onyx #0a0a0a */
+
+    --secondary: 98 29% 29%;           /* Hunter Green #445f34 */
+    --secondary-foreground: 72 34% 86%;
+
+    --muted: 98 25% 14%;
+    --muted-foreground: 72 20% 65%;
+
+    --accent: 76 48% 58%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 98 25% 18%;
+    --input: 98 25% 18%;
+    --ring: 76 48% 58%;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: hidden;
+}
