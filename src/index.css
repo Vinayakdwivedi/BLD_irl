@@ -5,77 +5,74 @@
 @layer base {
   :root {
     /* Palette from User:
-       --onyx: #0a0a0a (hsla(0, 0%, 4%, 1))
-       --yellow-green: #acc862 (hsla(76, 48%, 58%, 1))
-       --beige: #e2e7ce (hsla(72, 34%, 86%, 1))
-       --hunter-green: #445f34 (hsla(98, 29%, 29%, 1))
+       --deep-navy: #003049
+       --cream: #fdf0d5
     */
-    --onyx: 0 0% 4%;
-    --yellow-green: 76 48% 58%;
-    --beige: 72 34% 86%;
-    --hunter-green: 98 29% 29%;
+    --onyx: 202 100% 11%;
+    --yellow-green: 43 87% 91%;
+    --beige: 43 87% 91%;
+    --hunter-green: 200 100% 14%;
 
     /* Light Theme */
-    --background: 72 25% 96%;
-    --foreground: 98 35% 14%;
+    --background: 43 87% 91%;
+    --foreground: 202 100% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 98 35% 14%;
+    --card-foreground: 202 100% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 98 35% 14%;
+    --popover-foreground: 202 100% 11%;
 
-    --primary: 98 29% 29%;             /* Hunter Green #445f34 */
-    --primary-foreground: 72 34% 86%;  /* Beige #e2e7ce */
+    --primary: 200 100% 14%;            /* Deep navy #003049 */
+    --primary-foreground: 43 87% 91%;   /* Cream #fdf0d5 */
 
-    --secondary: 76 48% 58%;           /* Yellow Green #acc862 */
-    --secondary-foreground: 0 0% 4%;   /* Onyx #0a0a0a */
+    --secondary: 43 87% 91%;           /* Cream #fdf0d5 */
+    --secondary-foreground: 202 100% 11%;
 
-    --muted: 72 20% 90%;
-    --muted-foreground: 98 20% 36%;
+    --muted: 43 55% 85%;
+    --muted-foreground: 202 35% 32%;
 
-    --accent: 76 48% 58%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 43 87% 91%;
+    --accent-foreground: 202 100% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 98 20% 82%;
-    --input: 98 20% 82%;
-    --ring: 76 48% 58%;
+    --border: 202 24% 76%;
+    --input: 202 24% 76%;
+    --ring: 43 87% 91%;
 
     --radius: 0.75rem;
   }
 
   .dark {
     /* Dark Theme */
-    --background: 0 0% 4%;             /* Onyx #0a0a0a */
-    --foreground: 72 34% 86%;          /* Beige #e2e7ce */
+    --background: 202 100% 11%;        /* Deep navy */
+    --foreground: 43 87% 91%;          /* Cream */
+    --card: 202 100% 15%;              /* Navy surface */
+    --card-foreground: 43 87% 91%;
 
-    --card: 98 30% 9%;                 /* Deep Hunter-Onyx #111a0e */
-    --card-foreground: 72 34% 86%;
+    --popover: 202 100% 15%;
+    --popover-foreground: 43 87% 91%;
 
-    --popover: 98 30% 9%;
-    --popover-foreground: 72 34% 86%;
+    --primary: 43 87% 91%;             /* Cream #fdf0d5 */
+    --primary-foreground: 202 100% 11%;
 
-    --primary: 76 48% 58%;             /* Yellow Green #acc862 */
-    --primary-foreground: 0 0% 4%;     /* Onyx #0a0a0a */
+    --secondary: 200 100% 14%;         /* Deep navy #003049 */
+    --secondary-foreground: 43 87% 91%;
 
-    --secondary: 98 29% 29%;           /* Hunter Green #445f34 */
-    --secondary-foreground: 72 34% 86%;
+    --muted: 202 65% 18%;
+    --muted-foreground: 43 45% 80%;
 
-    --muted: 98 25% 14%;
-    --muted-foreground: 72 20% 65%;
-
-    --accent: 76 48% 58%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 43 87% 91%;
+    --accent-foreground: 202 100% 11%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 98 25% 18%;
-    --input: 98 25% 18%;
-    --ring: 76 48% 58%;
+    --border: 202 55% 27%;
+    --input: 202 55% 27%;
+    --ring: 43 87% 91%;
   }
 }
 

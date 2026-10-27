@@ -842,7 +842,7 @@ export default function App() {
               <div className="section-divider"></div>
               <div className="contact-grid">
                 <div className="contact-info">
-                  <p style={{ fontSize: "16px", color: "rgba(226, 231, 206, 0.85)", maxWidth: "400px" }}>
+                  <p style={{ fontSize: "16px", color: "rgba(253, 240, 213, 0.85)", maxWidth: "400px" }}>
                     Whether you're looking to partner, volunteer, or simply learn more about our work — we'd love
                     to hear from you.
                   </p>
@@ -910,9 +910,9 @@ export default function App() {
                 src="/Logo_BLD_Institute tranlucent.png"
                 alt="BLDIRL Foundation logo"
               />
-              <div className="nav-logo-text" style={{ color: "#e2e7ce" }}>
+              <div className="nav-logo-text" style={{ color: "#fdf0d5" }}>
                 BLDIRL Foundation
-                <span style={{ color: "#acc862" }}>Empowering Minds</span>
+                <span style={{ color: "#fdf0d5" }}>Empowering Minds</span>
               </div>
             </div>
             <p>Committed to advancing education, digital literacy, and innovation for a knowledge-driven India.</p>
