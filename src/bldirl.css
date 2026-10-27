@@ -557,9 +557,9 @@ html.dark .section-label {
   padding: 0 10px;
 }
 
-.vm-cards { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+.vm-cards { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
 .vm-card {
-  padding: 22px 24px;
+  padding: 18px 22px;
   background: var(--parchment);
   border-left: 4px solid #acc862;
   border-radius: 0 8px 8px 0;
@@ -1434,7 +1434,8 @@ footer {
   .nav-links.open { display: flex; }
   .hamburger { display: flex; }
   section { padding: 64px 5%; }
-  .about-grid, .csr-layout, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid, .csr-layout, .contact-grid, .vm-cards { grid-template-columns: 1fr; }
+  .vm-cards { grid-column: auto; }
   .about-badge { display: none; }
   .gallery-section-head { flex-direction: column; align-items: flex-start; }
   .gallery-preview-grid,

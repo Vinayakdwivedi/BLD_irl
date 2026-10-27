@@ -580,29 +580,34 @@ export default function App() {
                   <h2 className="section-title">BLD Institute of Research & Learning Foundation</h2>
                   <div className="section-divider"></div>
                   <p className="section-lead">
-                    BLD Institute of Research & Learning (BLDIRL), an institution based in National Capital
-                    Region aims to popularize science and technology by organizing various outreach programs to
-                    generate interest and creativity for innovation among students and faculty through a
-                    dedicated team of top academicians, well known researchers and experts from the field science
-                    and technology.
+                    The BLD Institute of Research and Learning (BLDIRL) Foundation, established on 14 February 
+                    2020 as a not-for-profit Section 8 company, is committed to making education accessible, practical, 
+                    and impactful. It promotes scientific thinking, technological innovation, entrepreneurship, skill 
+                    development, public health awareness, environmental conservation, and social welfare, particularly 
+                    across Delhi NCR and remote areas of Uttar Pradesh.
+
+                    By connecting students and communities with academicians, researchers, and professionals, BLDIRL 
+                    strives to foster innovation, empower communities, and build an educated, inclusive, and socially 
+                    responsible nation.
                   </p>
-                  <div className="vm-cards">
-                    <div className="vm-card">
-                      <h4>Our Vision</h4>
-                      <p>
-                        To foster a progressive, inclusive, and empowered society that enables lifelong learning,
-                        personal growth, and equal opportunities, empowering people and communities to contribute
-                        meaningfully to sustainable social and economic development.
-                      </p>
-                    </div>
-                    <div className="vm-card">
-                      <h4>Our Mission</h4>
-                      <p>
-                        To provide academic support and learning opportunities to help learners overcome
-                        educational gaps. To enhance employability through skill development, vocational training,
-                        and career readiness programs.
-                      </p>
-                    </div>
+                </div>
+                <div className="vm-cards">
+                  <div className="vm-card">
+                    <h4>Our Vision</h4>
+                    <p>
+                      To contribute towards building an educated, innovative, healthy, environmentally conscious, and socially responsible 
+                      India where individuals and communities have greater opportunities to learn,
+                       grow, and contribute to national development.
+                    </p>
+                  </div>
+                  <div className="vm-card">
+                    <h4>Our Mission</h4>
+                    <p>
+                      Our Mission
+                          <p>1. To promote educational interest, scientific thinking, technological temperament and entrepreneurship awareness among students. </p>
+                          <p>2. To promote health literacy, environmental responsibility, animal welfare, and constitutional awareness as social responsibility by knowledge-sharing, expert collaboration, and socially beneficial initiatives. </p>
+                          <p>3. To bridge the gap between knowledge and opportunity by encouraging informed participation, creative thinking, and responsible citizenship.</p>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -621,38 +626,42 @@ export default function App() {
               <div className="focus-grid">
                 <div className="focus-card">
                   <div className="focus-icon">💻</div>
-                  <h3>Digital Literacy</h3>
-                  <p>Workshops and training that build foundational digital skills for students and communities.</p>
+                  <h3>Education and Inclusive Learning</h3>
+                  <p>We empower underprivileged students through educational opportunities, 
+                    academic guidance, and knowledge-sharing initiatives.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">🤖</div>
-                  <h3>AI & Emerging Tech</h3>
-                  <p>Awareness programs on artificial intelligence, future technologies, and their responsible use.</p>
+                  <h3>Entrepreneurship and Career Awareness</h3>
+                  <p>We empower undergraduate and postgraduate students through entrepreneurship, 
+                    leadership, career guidance, and professional development initiatives.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">📚</div>
-                  <h3>Education & Learning</h3>
-                  <p>Supplementary learning support and structured educational outreach for underserved learners.</p>
+                  <h3>Science, Technology and Innovation</h3>
+                  <p>We promote science and technology by fostering scientific curiosity, 
+                    research, creative thinking, and innovation among students and faculty.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">🎓</div>
-                  <h3>Teacher Capacity Building</h3>
-                  <p>Professional development programs that equip educators with modern pedagogical tools.</p>
+                  <h3>Health Awareness</h3>
+                  <p>We promote public health awareness through education on cancer, lifestyle-related diseases, and preventive healthcare.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">🔬</div>
-                  <h3>STEM & Innovation</h3>
-                  <p>School innovation clubs and project-based STEM programs that spark curiosity and creativity.</p>
+                  <h3>Environmental Protection</h3>
+                  <p>We promote environmental sustainability through water conservation, clean air, pollution prevention, and responsible resource use.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">📊</div>
-                  <h3>Research & Development</h3>
-                  <p>Applied research in education, technology, and social impact to generate evidence-based insights.</p>
+                  <h3>Animal Welfare</h3>
+                  <p>We promote animal compassion, cow care, animal protection, and responsible welfare initiatives.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">🌱</div>
-                  <h3>Youth Skill Development</h3>
-                  <p>Future-ready skill initiatives that prepare young people for the evolving job landscape.</p>
+                  <h3>Constitutional and Legal Literacy</h3>
+                  <p>We aim to encourage public understanding of the Constitution of India, fundamental rights and 
+                    duties, and relevant legal provisions to promote informed and responsible citizenship.</p>
                 </div>
                 <div className="focus-card">
                   <div className="focus-icon">🤝</div>
