@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { SunMoonThemeToggle } from "@/components/ui/sun-moon-theme-toggle";
+import { submitDonation as submitDonationRequest } from "./api";
 
 interface SlideData {
   bg: string;
@@ -52,6 +53,16 @@ interface GalleryItem {
   title: string;
   desc: string;
   isLogo?: boolean;
+}
+
+interface DonationFormData {
+  transaction_id: string;
+  name: string;
+  email: string;
+  work: string;
+  profession: string;
+  address: string;
+  miscellaneous: string;
 }
 
 const fullGalleryItems: GalleryItem[] = [
@@ -154,6 +165,18 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [navScrolled, setNavScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [donationForm, setDonationForm] = useState<DonationFormData>({
+    transaction_id: "",
+    name: "",
+    email: "",
+    work: "",
+    profession: "",
+    address: "",
+    miscellaneous: "",
+  });
+  const [donationStatus, setDonationStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [donationMessage, setDonationMessage] = useState("");
   const [lightbox, setLightbox] = useState<{ open: boolean; src: string; caption: string; alt: string }>({
     open: false,
     src: "",
@@ -231,6 +254,7 @@ export default function App() {
 
   const navigateTo = (view: "home" | "gallery", hash?: string) => {
     setCurrentView(view);
+    setActiveSection(view === "gallery" ? "gallery" : hash?.replace("#", "") || "home");
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
     if (hash) {
@@ -238,6 +262,36 @@ export default function App() {
         const el = document.getElementById(hash.replace("#", ""));
         if (el) el.scrollIntoView({ behavior: "smooth" });
       }, 100);
+    }
+  };
+
+  const submitDonation = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setDonationStatus("submitting");
+    setDonationMessage("");
+
+    try {
+      await submitDonationRequest(donationForm);
+
+      setDonationForm({
+        transaction_id: "",
+        name: "",
+        email: "",
+        work: "",
+        profession: "",
+        address: "",
+        miscellaneous: "",
+      });
+      setDonationStatus("success");
+      setDonationMessage("Thank you. Your transaction details have been submitted for verification.");
+    } catch (error) {
+      setDonationStatus("error");
+      const message = error instanceof Error ? error.message : "Donation submission failed.";
+      setDonationMessage(
+        message === "Donation API is not configured."
+          ? "The donation service is not connected yet. Please email info@bldirl.org to confirm your contribution."
+          : message,
+      );
     }
   };
 
@@ -276,7 +330,7 @@ export default function App() {
           <li>
             <a
               href="#home"
-              className={currentView === "home" ? "nav-current" : ""}
+              className={activeSection === "home" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#home");
@@ -288,6 +342,7 @@ export default function App() {
           <li>
             <a
               href="#about"
+              className={activeSection === "about" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#about");
@@ -299,6 +354,7 @@ export default function App() {
           <li>
             <a
               href="#programs"
+              className={activeSection === "programs" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#programs");
@@ -310,6 +366,7 @@ export default function App() {
           <li>
             <a
               href="#impact"
+              className={activeSection === "impact" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#impact");
@@ -321,6 +378,7 @@ export default function App() {
           <li>
             <a
               href="#research"
+              className={activeSection === "research" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#research");
@@ -332,6 +390,7 @@ export default function App() {
           <li>
             <a
               href="#news"
+              className={activeSection === "news" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#news");
@@ -343,7 +402,7 @@ export default function App() {
           <li>
             <a
               href="#gallery"
-              className={currentView === "gallery" ? "nav-current" : ""}
+              className={activeSection === "gallery" ? "nav-current" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("gallery");
@@ -355,13 +414,25 @@ export default function App() {
           <li>
             <a
               href="#contact"
-              className="nav-cta"
+              className={`nav-cta ${activeSection === "contact" ? "nav-current" : ""}`}
               onClick={(e) => {
                 e.preventDefault();
                 navigateTo("home", "#contact");
               }}
             >
               Contact Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#donate"
+              className={`nav-donate ${activeSection === "donate" ? "nav-current" : ""}`}
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo("home", "#donate");
+              }}
+            >
+              <span className="nav-donate-heart" aria-hidden="true">♥</span> Donate Now
             </a>
           </li>
           {/* Integrated Sun-Moon Theme Toggle */}
@@ -724,7 +795,7 @@ export default function App() {
             </div>
           </section>
 
-          {/* NEWS SECTION */}
+          {/* NEWS SECTION
           <section id="news">
             <div className="section-inner">
               <div className="section-label">Stay Updated</div>
@@ -775,7 +846,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* GALLERY PREVIEW SECTION */}
           <section id="gallery">
@@ -830,6 +901,84 @@ export default function App() {
                     </p>
                   </div>
                 </article>
+              </div>
+            </div>
+          </section>
+
+          {/* DONATION SECTION */}
+          <section id="donate" className="donation-section">
+            <div className="section-inner">
+              <div className="section-label">Support The Mission</div>
+              <h2 className="section-title">Give with purpose</h2>
+              <div className="section-divider"></div>
+              <div className="donation-grid">
+                <div className="donation-copy">
+                  <span className="donation-heart" aria-hidden="true">♥</span>
+                  <h3>Your support helps learning reach further.</h3>
+                  <p>
+                    Contributions help us expand digital literacy, teacher development, and research-led
+                    learning programs. Transfer your contribution using the details below, then share the
+                    transaction ID so our team can verify it.
+                  </p>
+                  <div className="bank-card">
+                    <div className="bank-card-heading">
+                      <span>Bank transfer details</span>
+                      <span className="placeholder-badge">PLACEHOLDER</span>
+                    </div>
+                    <dl>
+                      <div><dt>Account name</dt><dd>BLD Institute of Research & Learning Foundation</dd></div>
+                      <div><dt>Bank name</dt><dd>Example National Bank</dd></div>
+                      <div><dt>Account number</dt><dd>0000 0000 0000</dd></div>
+                      <div><dt>IFSC / branch</dt><dd>EXMP0000001 · New Delhi</dd></div>
+                      <div><dt>UPI ID</dt><dd>donate@example.org</dd></div>
+                    </dl>
+                    <p className="bank-note">Replace these placeholder values with your verified account details before publishing.</p>
+                  </div>
+                </div>
+                <form className="donation-form" onSubmit={submitDonation}>
+                  <div className="donation-form-heading">
+                    <h3>Submit your transaction</h3>
+                    <p>Required fields are marked <span aria-hidden="true">*</span>.</p>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="transaction-id">Transaction ID *</label>
+                    <input id="transaction-id" required value={donationForm.transaction_id} onChange={(e) => setDonationForm({ ...donationForm, transaction_id: e.target.value })} placeholder="e.g. UTR or payment reference" />
+                  </div>
+                  <div className="donation-form-row">
+                    <div className="form-group">
+                      <label htmlFor="donor-name">Name *</label>
+                      <input id="donor-name" required value={donationForm.name} onChange={(e) => setDonationForm({ ...donationForm, name: e.target.value })} placeholder="Your full name" />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="donor-email">Email *</label>
+                      <input id="donor-email" type="email" required value={donationForm.email} onChange={(e) => setDonationForm({ ...donationForm, email: e.target.value })} placeholder="you@email.com" />
+                    </div>
+                  </div>
+                  <div className="donation-form-row">
+                    <div className="form-group">
+                      <label htmlFor="donor-work">Work / organisation</label>
+                      <input id="donor-work" value={donationForm.work} onChange={(e) => setDonationForm({ ...donationForm, work: e.target.value })} placeholder="Where you work (optional)" />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="donor-profession">Profession</label>
+                      <input id="donor-profession" value={donationForm.profession} onChange={(e) => setDonationForm({ ...donationForm, profession: e.target.value })} placeholder="Your profession (optional)" />
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="donor-address">Address <span>(optional)</span></label>
+                    <textarea id="donor-address" value={donationForm.address} onChange={(e) => setDonationForm({ ...donationForm, address: e.target.value })} placeholder="Address details (optional)" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="donor-miscellaneous">Miscellaneous details <span>(optional)</span></label>
+                    <textarea id="donor-miscellaneous" value={donationForm.miscellaneous} onChange={(e) => setDonationForm({ ...donationForm, miscellaneous: e.target.value })} placeholder="Anything else you would like us to know" />
+                  </div>
+                  <button className="btn-submit donation-submit" type="submit" disabled={donationStatus === "submitting"}>
+                    {donationStatus === "submitting" ? "Submitting…" : "Submit transaction details"}
+                  </button>
+                  {donationMessage && (
+                    <p className={`donation-status donation-status--${donationStatus}`} role="status">{donationMessage}</p>
+                  )}
+                </form>
               </div>
             </div>
           </section>
