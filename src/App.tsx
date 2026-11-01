@@ -289,7 +289,7 @@ export default function App() {
       const message = error instanceof Error ? error.message : "Donation submission failed.";
       setDonationMessage(
         message === "Donation API is not configured."
-          ? "The donation service is not connected yet. Please email info@bldirl.org to confirm your contribution."
+          ? "The donation service is not connected yet. Please email these details to dhirendra.san@gmail.com to confirm your contribution."
           : message,
       );
     }
